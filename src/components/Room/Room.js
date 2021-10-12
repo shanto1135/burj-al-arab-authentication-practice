@@ -13,7 +13,7 @@ import { red } from '@material-ui/core/colors';
 import LocalHotelIcon from '@material-ui/icons/LocalHotel';
 import WcIcon from '@material-ui/icons/Wc';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -76,9 +76,11 @@ export default function Room({room}){
         <IconButton aria-label="price">
           <AttachMoneyIcon />: {room.price} 
         </IconButton>
-        <Button onClick={() => handleBook(room.bedType)} variant="contained" color="primary">
+        <Link to="/pvtcomponents">
+        <Button  variant="contained" color="primary">
             Book
         </Button>
+        </Link>
       </CardActions>
     </Card>
   );
