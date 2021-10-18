@@ -13,6 +13,7 @@ import AuthProvider from './Context/AuthProvider';
 import Register from './components/Register/Register';
 import PrivetRoute from './Privet/PrivetRoute';
 import PrivetComponents from './components/Privets/PrivetComponents';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -39,6 +40,10 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
+            <Route exact path="/*">
+              <NotFound />
+            </Route>
+
           </Switch>
       </Router>
       </AuthProvider>

@@ -20,7 +20,7 @@ const Header = () => {
                     <li>
                     <Link to="/pvtcomponents">Book</Link>
                     </li>
-                    {(users?.email) ?
+                    {(users?.displayName) ?
                     <li>
                         <Link onClick={handelSignOut} className="btn-book" to="/logout">LogOut</Link>
                     </li> 
